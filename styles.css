@@ -384,6 +384,18 @@ h1 {
   max-width: 640px;
 }
 
+.cta-button {
+  min-width: 250px;
+  min-height: 60px;
+  padding: 0 34px;
+  margin-right: 24px;
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: 800;
+  white-space: nowrap;
+  box-shadow: 0 18px 34px rgba(255, 45, 125, 0.24);
+}
+
 .footer {
   padding: 0 0 32px;
   color: #7f8798;
@@ -403,6 +415,10 @@ h1 {
   .cta {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .cta-button {
+    margin-right: 0;
   }
 }
 
@@ -426,6 +442,13 @@ h1 {
   .hero-actions .button,
   .cta .button {
     width: 100%;
+  }
+
+  .cta-button {
+    min-width: 0;
+    min-height: 56px;
+    padding: 0 24px;
+    font-size: 17px;
   }
 
   .main-content {
