@@ -1,0 +1,468 @@
+@import url("https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css");
+
+:root {
+  --text: #171923;
+  --muted: #687182;
+  --line: rgba(23, 25, 35, 0.08);
+  --line-strong: rgba(23, 25, 35, 0.12);
+  --surface: rgba(255, 255, 255, 0.88);
+  --surface-strong: #ffffff;
+  --pink: #ff4f96;
+  --pink-strong: #ff2d7d;
+  --pink-soft: rgba(255, 79, 150, 0.1);
+  --blue-soft: #eef4ff;
+  --shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "SUIT", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(255, 79, 150, 0.1), transparent 32%),
+    radial-gradient(circle at top right, rgba(118, 169, 255, 0.12), transparent 30%),
+    linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)),
+    linear-gradient(to right, rgba(26, 32, 44, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(26, 32, 44, 0.035) 1px, transparent 1px);
+  background-size: auto, auto, auto, 56px 56px, 56px 56px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(1080px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(23, 25, 35, 0.05);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 84px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.brand-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 35% 35%, #ff91be, var(--pink-strong));
+  box-shadow: 0 0 0 8px rgba(255, 79, 150, 0.08);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 20px;
+  border-radius: 16px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button-primary {
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--pink), var(--pink-strong));
+  box-shadow: 0 14px 30px rgba(255, 45, 125, 0.18);
+}
+
+.button-secondary {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid var(--line-strong);
+}
+
+.main-content {
+  padding: 36px 0 28px;
+}
+
+.surface {
+  background: var(--surface);
+  border: 1px solid rgba(255, 255, 255, 0.68);
+  border-radius: 30px;
+  box-shadow: var(--shadow);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+  gap: 26px;
+  align-items: center;
+  padding: 42px;
+}
+
+.hero-copy {
+  max-width: 540px;
+}
+
+.eyebrow,
+.section-label,
+.access-badge,
+.message-label {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.eyebrow {
+  background: rgba(255, 79, 150, 0.09);
+  color: var(--pink-strong);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1 {
+  margin-top: 18px;
+  font-size: clamp(38px, 4.8vw, 58px);
+  line-height: 1.08;
+  letter-spacing: -0.05em;
+}
+
+.title-line,
+.line-break {
+  display: block;
+}
+
+.highlight {
+  color: var(--pink);
+}
+
+.highlight-line {
+  white-space: nowrap;
+}
+
+.lead {
+  margin-top: 20px;
+  font-size: 19px;
+  line-height: 1.7;
+  letter-spacing: -0.03em;
+  color: #2d3340;
+}
+
+.support-copy {
+  margin-top: 12px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.access-card {
+  padding: 30px;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid var(--line);
+}
+
+.access-badge {
+  background: var(--blue-soft);
+  color: #2f5cff;
+}
+
+.access-card h2 {
+  margin-top: 14px;
+  font-size: 31px;
+  line-height: 1.25;
+  letter-spacing: -0.04em;
+}
+
+.access-text {
+  margin-top: 12px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.mock-panel {
+  margin-top: 24px;
+  padding: 18px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(248, 250, 252, 0.98), rgba(255, 255, 255, 0.92));
+  border: 1px solid var(--line);
+}
+
+.mock-label {
+  font-size: 13px;
+  font-weight: 800;
+  color: #7a8394;
+  letter-spacing: -0.02em;
+}
+
+.mock-input {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 54px;
+  margin-top: 12px;
+  padding: 0 16px;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  background: #ffffff;
+  border: 1px solid rgba(23, 25, 35, 0.08);
+  color: #a1a7b4;
+}
+
+.mock-note {
+  margin-top: 12px;
+  font-size: 14px;
+  line-height: 1.65;
+  color: #6c7587;
+}
+
+.access-note {
+  margin-top: 14px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #808899;
+}
+
+.guide,
+.cta {
+  margin-top: 24px;
+  padding: 34px;
+}
+
+.section-heading {
+  max-width: 700px;
+}
+
+.section-label {
+  background: rgba(255, 79, 150, 0.08);
+  color: var(--pink-strong);
+}
+
+.section-heading h2,
+.cta h2 {
+  margin-top: 14px;
+  font-size: 34px;
+  line-height: 1.22;
+  letter-spacing: -0.04em;
+}
+
+.section-heading p,
+.cta-copy p {
+  margin-top: 12px;
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.step-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.step-card {
+  padding: 24px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid var(--line);
+}
+
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  background: var(--pink-soft);
+  color: var(--pink-strong);
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.step-card h3 {
+  margin-top: 18px;
+  font-size: 21px;
+  line-height: 1.4;
+  letter-spacing: -0.03em;
+}
+
+.step-card p {
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--muted);
+}
+
+.message-card {
+  margin-top: 20px;
+  padding: 22px 24px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, rgba(255, 79, 150, 0.06), rgba(118, 169, 255, 0.08));
+  border: 1px solid rgba(255, 79, 150, 0.12);
+}
+
+.message-label {
+  min-height: 42px;
+  padding: 0 16px;
+  background: rgba(255, 255, 255, 0.76);
+  color: var(--pink-strong);
+  font-size: 17px;
+  font-weight: 900;
+  box-shadow: 0 8px 24px rgba(255, 79, 150, 0.08);
+}
+
+.message-text {
+  margin-top: 14px;
+  font-size: 18px;
+  line-height: 1.7;
+  letter-spacing: -0.03em;
+  color: var(--text);
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.cta-copy {
+  max-width: 640px;
+}
+
+.footer {
+  padding: 0 0 32px;
+  color: #7f8798;
+  font-size: 14px;
+  text-align: center;
+}
+
+@media (max-width: 960px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .step-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: min(100% - 20px, 1080px);
+  }
+
+  .nav {
+    flex-direction: column;
+    justify-content: center;
+    padding: 18px 0;
+  }
+
+  .nav-actions,
+  .hero-actions {
+    width: 100%;
+  }
+
+  .nav-actions .button,
+  .hero-actions .button,
+  .cta .button {
+    width: 100%;
+  }
+
+  .main-content {
+    padding-top: 22px;
+  }
+
+  .hero,
+  .guide,
+  .cta {
+    padding: 24px;
+    border-radius: 24px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  .highlight-line {
+    white-space: normal;
+  }
+
+  .access-card h2,
+  .section-heading h2,
+  .cta h2 {
+    font-size: 28px;
+  }
+
+  .lead {
+    font-size: 17px;
+  }
+
+  .support-copy,
+  .section-heading p,
+  .cta-copy p,
+  .step-card p,
+  .access-text,
+  .message-text {
+    font-size: 15px;
+  }
+}
