@@ -222,6 +222,9 @@ h1 {
   font-size: 31px;
   line-height: 1.25;
   letter-spacing: -0.04em;
+  word-break: keep-all;
+  overflow-wrap: normal;
+  text-wrap: balance;
 }
 
 .access-text {
@@ -266,6 +269,8 @@ h1 {
   font-size: 14px;
   line-height: 1.65;
   color: #6c7587;
+  word-break: keep-all;
+  overflow-wrap: normal;
 }
 
 .access-note {
